@@ -1,0 +1,50 @@
+/* --- FONT FACE --- */
+@font-face {
+  font-family: 'Headache';
+  src: url(./fonts/Headache/Headache-Font-OTF.otf);
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url(./fonts/Gotham/Gotham-Light.otf);
+}
+
+.tarot__primary_font {
+  font-family: 'Headache';
+}
+
+.tarot__secondary_font {
+  font-family: 'Gotham';
+}
+
+.tarot__primary_bg {
+  background-image: linear-gradient(#000000bf, #0000008c), url(./assets/tarot_primary_bg.gif);
+  background-position: bottom left;
+  background-size: contain;
+}
+
+.tarot__perspective {
+  perspective: 1000px;
+  transition: all 2ms ease-in-out;
+  
+}
+
+.tarot__image {
+  transform-style: preserve-3d;
+  transform: rotateY(30deg);
+}
+
+
+.animate {
+  animation: card_bounce 5s infinite;
+}
+
+@keyframes card_bounce {
+  0%, to {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(2rem);
+  }
+}
